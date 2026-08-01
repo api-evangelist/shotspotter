@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+host: https://www.soundthinking.com
+notes: >-
+  Probed the /.well-known/ discovery surface on the SoundThinking web host and the developer-docs host.
+  No real discovery documents are published. On www.soundthinking.com every probe returned 404. The
+  docs.soundthinking.com host is a Docusaurus single-page app that returns its index.html (HTTP 200,
+  text/html, 6598 bytes) for ALL unmatched paths, so its /.well-known/* "200" responses are the SPA
+  catch-all, not genuine documents, and are recorded as not-present. Absence is a valid, expected result.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+also_probed:
+- host: https://docs.soundthinking.com
+  result: SPA-catch-all (index.html served for /.well-known/*; no real documents)

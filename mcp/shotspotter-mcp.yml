@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://docs.soundthinking.com/api/overview
+notes: >-
+  No official hosted or remote MCP server was found for SoundThinking / ShotSpotter (checked npm
+  @modelcontextprotocol, MCP registries, and the developer docs). This is a CANDIDATE tool surface
+  derived from the documented REST data APIs on docs.soundthinking.com — one tool per documented
+  endpoint — as a starting point for a future MCP server. It is not published by the provider.
+server:
+  name: shotspotter
+  transport: http
+tools:
+- name: get_shotspotter_incident_data
+  description: Retrieve ShotSpotter gunfire incident data.
+  source_operation: https://docs.soundthinking.com/api/ShotSpotter/incident_data_api
+- name: get_shotspotter_cad_id
+  description: Look up the CAD (Computer-Aided Dispatch) incident ID for a ShotSpotter incident.
+  source_operation: https://docs.soundthinking.com/api/ShotSpotter/cad_id_api
+- name: get_shotspotter_ils
+  description: Retrieve a ShotSpotter ILS (Investigative Lead Summary).
+  source_operation: https://docs.soundthinking.com/api/ShotSpotter/ils_api
+- name: get_safepointe_alert_data
+  description: Retrieve SafePointe weapons-detection alert data.
+  source_operation: https://docs.soundthinking.com/api/SafePointe/alert_data_api
+- name: get_safepointe_linecrossing_data
+  description: Retrieve SafePointe line-crossing data.
+  source_operation: https://docs.soundthinking.com/api/SafePointe/linecrossing_data_api

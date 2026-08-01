@@ -1,0 +1,51 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.soundthinking.com/napi/overview
+spec_type: Webhooks
+summary: >-
+  NAPI (Notification API) is the SoundThinking webhook / push-notification interface. Rather than the
+  consumer polling, SoundThinking pushes real-time alert documents as XML packets to a customer-operated
+  network endpoint (CAD / RMS / integration server) that is provisioned during NAPI network setup. Two
+  product families publish alert documents: ShotSpotter (gunfire incidents, IALRT documents) and
+  SafePointe (weapons-detection alerts, SPALRT documents). A periodic heartbeat confirms the link is
+  healthy. Message payloads are XML; document types and packet specifications are versioned per product.
+docs:
+  overview: https://docs.soundthinking.com/napi/overview
+  background: https://docs.soundthinking.com/napi/background
+  network_setup: https://docs.soundthinking.com/napi/network_setup
+  heartbeat_configuration: https://docs.soundthinking.com/napi/heartbeat_configuration
+  faq: https://docs.soundthinking.com/napi/faq_documentation
+  appendix: https://docs.soundthinking.com/napi/appendix
+transport: push (XML packets to a provisioned customer network endpoint)
+payload_format: xml
+events:
+- product: ShotSpotter
+  name: incident_presentation
+  description: Real-time presentation of a ShotSpotter gunfire incident to the customer endpoint.
+  docs: https://docs.soundthinking.com/napi/ShotSpotter/incident_presentation
+  documents:
+  - id: IALRT04
+    docs: https://docs.soundthinking.com/napi/ShotSpotter/ialrt04_document
+  - id: IALRT05
+    docs: https://docs.soundthinking.com/napi/ShotSpotter/ialrt05_document
+  - id: IALRT06
+    docs: https://docs.soundthinking.com/napi/ShotSpotter/ialrt06_document
+  packet_specs: https://docs.soundthinking.com/napi/ShotSpotter/packet_specs
+  document_types: https://docs.soundthinking.com/napi/ShotSpotter/xml_document_types
+- product: SafePointe
+  name: alert_presentation
+  description: Real-time presentation of a SafePointe weapons-detection alert to the customer endpoint.
+  docs: https://docs.soundthinking.com/napi/SafePointe/alert_presentation
+  documents:
+  - id: SPALRT01
+    docs: https://docs.soundthinking.com/napi/SafePointe/spalrt01_document
+  packet_specs: https://docs.soundthinking.com/napi/SafePointe/packet_specs
+  document_types: https://docs.soundthinking.com/napi/SafePointe/xml_document_types
+- product: NAPI
+  name: heartbeat
+  description: Periodic heartbeat packet confirming the NAPI push link is healthy.
+  docs: https://docs.soundthinking.com/napi/heartbeat_configuration
+notes: >-
+  Captured from the public SoundThinking developer documentation sitemap and NAPI section. Document
+  field-level schemas are published on the per-document doc pages above; they are not reproduced here to
+  avoid transcription error. No published AsyncAPI document was found — this is a webhook/event catalog.

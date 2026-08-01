@@ -1,27 +1,105 @@
 aid: shotspotter
-name: Shotspotter
-description: 'Shotspotter is a company surfaced as a portfolio company of norwest-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. Sector: unknown. This profile is a lead
-  awaiting the enrichment pipeline.'
+name: ShotSpotter (SoundThinking)
+description: 'ShotSpotter is the flagship acoustic gunshot detection service of SoundThinking, Inc.
+  (Nasdaq: SSTI), the public safety technology company formerly named ShotSpotter, Inc. SoundThinking
+  operates a portfolio of law-enforcement and security products including ShotSpotter gunfire detection,
+  SafePointe AI weapons detection, PlateRanger license-plate recognition, CrimeTracer investigative
+  search, CaseBuilder case management, and ResourceRouter patrol analytics. Developers integrate via the
+  SoundThinking developer documentation at docs.soundthinking.com, which publishes REST data APIs for
+  ShotSpotter (incident data, CAD incident ID, ILS) and SafePointe (alert data, line-crossing data), plus
+  NAPI, a webhook/push notification interface that delivers real-time XML alert documents (ShotSpotter
+  IALRT incident presentations and SafePointe SPALRT alerts) to a customer network endpoint, alongside an
+  Applications IT Resource Guide.'
 url: https://raw.githubusercontent.com/api-evangelist/shotspotter/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - norwest-venture-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-developer-docs
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1
 tags:
 - Company
-- Unknown
-apis: []
+- Public Safety
+- Gunshot Detection
+- Law Enforcement
+- Weapons Detection
+- Acoustic Sensors
+- Government
+- Security
+- Webhooks
+image: https://www.soundthinking.com/wp-content/themes/soundthinking/assets/images/soundthinking-logo.svg
+apis:
+- name: ShotSpotter Data APIs
+  description: REST data APIs for ShotSpotter gunfire detection — incident data, CAD incident ID lookup,
+    and ILS (Investigative Lead Summary) retrieval.
+  humanURL: https://docs.soundthinking.com/api/ShotSpotter/incident_data_api
+  properties:
+  - type: Documentation
+    url: https://docs.soundthinking.com/api/ShotSpotter/incident_data_api
+  - type: APIReference
+    url: https://docs.soundthinking.com/api/ShotSpotter/cad_id_api
+  - type: APIReference
+    url: https://docs.soundthinking.com/api/ShotSpotter/ils_api
+  - type: Authentication
+    url: https://docs.soundthinking.com/api/authentication
+- name: SafePointe Data APIs
+  description: REST data APIs for SafePointe AI weapons detection — alert data and line-crossing data.
+  humanURL: https://docs.soundthinking.com/api/SafePointe/alert_data_api
+  properties:
+  - type: Documentation
+    url: https://docs.soundthinking.com/api/SafePointe/alert_data_api
+  - type: APIReference
+    url: https://docs.soundthinking.com/api/SafePointe/linecrossing_data_api
+  - type: Authentication
+    url: https://docs.soundthinking.com/api/authentication
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://docs.soundthinking.com/
+- type: Documentation
+  url: https://docs.soundthinking.com/
+- type: APIReference
+  url: https://docs.soundthinking.com/api/overview
+- type: Authentication
+  url: https://docs.soundthinking.com/api/authentication
+- type: Webhooks
+  url: asyncapi/shotspotter-napi-webhooks.yml
+- type: Support
+  url: https://www.soundthinking.com/contact/support-and-training/support/
+- type: Blog
+  url: https://www.soundthinking.com/blog/
+- type: PrivacyPolicy
+  url: https://www.soundthinking.com/privacy-policy/
+- type: WellKnown
+  url: well-known/shotspotter-well-known.yml
+- type: LLMsTxt
+  url: llms/shotspotter-llms.txt
+- type: MCPServer
+  url: mcp/shotspotter-mcp.yml
+- type: DomainSecurity
+  url: security/shotspotter-domain-security.yml
 - type: Website
-  url: https://shotspotter.com
+  url: https://www.soundthinking.com

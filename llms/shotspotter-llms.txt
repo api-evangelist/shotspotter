@@ -1,0 +1,44 @@
+# ShotSpotter (SoundThinking)
+
+> ShotSpotter is the acoustic gunshot detection service of SoundThinking, Inc. (Nasdaq: SSTI), a public
+> safety technology company (formerly ShotSpotter, Inc.). SoundThinking publishes developer documentation
+> at docs.soundthinking.com covering REST data APIs for ShotSpotter and SafePointe, plus NAPI — a
+> webhook/push interface that delivers real-time XML alert documents to a customer network endpoint.
+
+## APIs
+
+- [ShotSpotter Incident Data API](https://docs.soundthinking.com/api/ShotSpotter/incident_data_api): Gunfire incident data.
+- [ShotSpotter CAD ID API](https://docs.soundthinking.com/api/ShotSpotter/cad_id_api): CAD incident ID lookup.
+- [ShotSpotter ILS API](https://docs.soundthinking.com/api/ShotSpotter/ils_api): Investigative Lead Summary retrieval.
+- [SafePointe Alert Data API](https://docs.soundthinking.com/api/SafePointe/alert_data_api): Weapons-detection alert data.
+- [SafePointe Line-Crossing Data API](https://docs.soundthinking.com/api/SafePointe/linecrossing_data_api): Line-crossing data.
+
+## Webhooks (NAPI)
+
+- [NAPI Overview](https://docs.soundthinking.com/napi/overview): Push notification interface delivering XML alert documents.
+- [Network Setup](https://docs.soundthinking.com/napi/network_setup): Provisioning the customer network endpoint.
+- [Heartbeat Configuration](https://docs.soundthinking.com/napi/heartbeat_configuration): Link-health heartbeat packets.
+- [ShotSpotter Incident Presentation](https://docs.soundthinking.com/napi/ShotSpotter/incident_presentation): IALRT04 / IALRT05 / IALRT06 documents.
+- [SafePointe Alert Presentation](https://docs.soundthinking.com/napi/SafePointe/alert_presentation): SPALRT01 document.
+
+## Docs
+
+- [Developer Documentation](https://docs.soundthinking.com/): SoundThinking APIs, NAPI, and IT resources.
+- [API Overview](https://docs.soundthinking.com/api/overview)
+- [Authentication](https://docs.soundthinking.com/api/authentication)
+- [Applications IT Resource Guide](https://docs.soundthinking.com/apps-it-resource-guide/overview)
+
+## Company
+
+- [SoundThinking](https://www.soundthinking.com): Public safety technology (ShotSpotter, SafePointe, PlateRanger, CrimeTracer, CaseBuilder, ResourceRouter).
+- [Blog](https://www.soundthinking.com/blog/)
+- [Support](https://www.soundthinking.com/contact/support-and-training/support/)
+- [Investor Relations](https://ir.soundthinking.com/)
+- [Privacy Policy](https://www.soundthinking.com/privacy-policy/)
+
+## Artifacts
+
+- [NAPI Webhooks catalog](asyncapi/shotspotter-napi-webhooks.yml)
+- [Well-known probe index](well-known/shotspotter-well-known.yml)
+- [Candidate MCP tools](mcp/shotspotter-mcp.yml)
+- [Domain security probe](security/shotspotter-domain-security.yml)
