@@ -45,6 +45,16 @@ tags:
 - Acoustic Sensors
 - Government
 - Security
+- Webhook
+tags_raw:
+- Company
+- Public Safety
+- Gunshot Detection
+- Law Enforcement
+- Weapons Detection
+- Acoustic Sensors
+- Government
+- Security
 - Webhooks
 image: https://www.soundthinking.com/wp-content/themes/soundthinking/assets/images/soundthinking-logo.svg
 apis:
